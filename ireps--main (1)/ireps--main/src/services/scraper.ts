@@ -14,11 +14,22 @@ export async function scrapeLeads(url: string = "https://news.ycombinator.com"):
     const leads: Lead[] = [];
     
     // Read config dynamically to avoid cache issues
-    const configPath = path.join(process.cwd(), "src/config/source_config.json");
-    const sourceConfig = JSON.parse(fs.readFileSync(configPath, "utf8"));
+    let sourceConfig = { Reddit: { enabled: true, subreddits: ["TorontoRealEstate"] } };
+    let platformConfig = { platforms: { reddit: { enabled: true, scrape_posts: true, scrape_comments: true }, facebook: { enabled: true, scrape_posts: true, scrape_comments: true }, instagram: { enabled: true, scrape_posts: true, scrape_comments: true }, twitter: { enabled: true, scrape_tweets: true, scrape_replies: true }, linkedin: { enabled: true, scrape_posts: true, scrape_comments: true } } };
     
-    const platformConfigPath = path.join(process.cwd(), "src/config/platform_config.json");
-    const platformConfig = JSON.parse(fs.readFileSync(platformConfigPath, "utf8"));
+    try {
+      const configPath = path.join(process.cwd(), "src/config/source_config.json");
+      if (fs.existsSync(configPath)) {
+        sourceConfig = JSON.parse(fs.readFileSync(configPath, "utf8"));
+      }
+    } catch (e) { console.warn("Could not read source_config.json, using defaults"); }
+    
+    try {
+      const platformConfigPath = path.join(process.cwd(), "src/config/platform_config.json");
+      if (fs.existsSync(platformConfigPath)) {
+        platformConfig = JSON.parse(fs.readFileSync(platformConfigPath, "utf8"));
+      }
+    } catch (e) { console.warn("Could not read platform_config.json, using defaults"); }
     
     const rawLeads: any[] = [];
 

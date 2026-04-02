@@ -1,5 +1,14 @@
 {
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "src/config/*.json"
+    }
+  },
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.ts"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

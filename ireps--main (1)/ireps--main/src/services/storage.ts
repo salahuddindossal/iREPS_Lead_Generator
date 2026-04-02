@@ -4,7 +4,12 @@ import { Lead } from "../types";
 
 const DATA_FILE = path.join(process.cwd(), "data", "leads.json");
 
+// In-memory storage for Vercel sessions (transient but works)
+let inMemoryLeads: Lead[] = [];
+const isVercel = process.env.VERCEL === "1";
+
 export async function getLeads(): Promise<Lead[]> {
+  if (isVercel) return inMemoryLeads;
   try {
     const data = await fs.readFile(DATA_FILE, "utf-8");
     return JSON.parse(data);
@@ -20,9 +25,26 @@ export async function saveLeads(newLeads: Lead[]): Promise<void> {
   const uniqueNewLeads = newLeads.filter(l => !existingIds.has(l.id));
   const allLeads = [...uniqueNewLeads, ...existingLeads];
   
-  await fs.writeFile(DATA_FILE, JSON.stringify(allLeads, null, 2));
+  if (isVercel) {
+    inMemoryLeads = allLeads;
+    return;
+  }
+  
+  try {
+    await fs.writeFile(DATA_FILE, JSON.stringify(allLeads, null, 2));
+  } catch (err) {
+    console.warn("Storage warning: Could not write to disk. This is expected on Vercel.");
+  }
 }
 
 export async function clearLeads(): Promise<void> {
-  await fs.writeFile(DATA_FILE, JSON.stringify([], null, 2));
+  if (isVercel) {
+    inMemoryLeads = [];
+    return;
+  }
+  try {
+    await fs.writeFile(DATA_FILE, JSON.stringify([], null, 2));
+  } catch (err) {
+    inMemoryLeads = []; // Secondary fallback
+  }
 }
