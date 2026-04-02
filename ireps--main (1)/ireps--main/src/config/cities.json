@@ -1,0 +1,68 @@
+{
+    "Canada": {
+        "toronto": {
+            "name": "Toronto",
+            "areas": ["North York", "Scarborough", "Etobicoke", "Downtown", "Midtown", "East York", "York", "West End"]
+        },
+        "vancouver": {
+            "name": "Vancouver",
+            "areas": ["Downtown", "West End", "Kitsilano", "Mount Pleasant", "East Van", "South Vancouver"]
+        },
+        "mississauga": {
+            "name": "Mississauga",
+            "areas": ["Square One", "Port Credit", "Erin Mills", "Meadowvale", "Streetsville"]
+        },
+        "calgary": {
+            "name": "Calgary",
+            "areas": ["Downtown", "Northwest", "Northeast", "Southwest", "Southeast"]
+        },
+        "edmonton": {
+            "name": "Edmonton",
+            "areas": ["Downtown", "Whyte Ave", "North", "South", "West"]
+        },
+        "montreal": {
+            "name": "Montreal",
+            "areas": ["Downtown", "Plateau", "Westmount", "NDG", "South Shore"]
+        },
+        "ottawa": {
+            "name": "Ottawa",
+            "areas": ["Downtown", "Nepean", "Kanata", "Orleans", "Gatineau"]
+        }
+    },
+    "USA": {
+        "new_york": {
+            "name": "New York",
+            "areas": ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]
+        },
+        "los_angeles": {
+            "name": "Los Angeles",
+            "areas": ["Downtown", "Hollywood", "Santa Monica", "Beverly Hills", "Valley"]
+        },
+        "chicago": {
+            "name": "Chicago",
+            "areas": ["Loop", "North Side", "South Side", "West Side", "Suburbs"]
+        },
+        "houston": {
+            "name": "Houston",
+            "areas": ["Downtown", "Uptown", "West", "North", "South"]
+        },
+        "miami": {
+            "name": "Miami",
+            "areas": ["Downtown", "South Beach", "Coral Gables", "Brickell", "North Miami"]
+        }
+    },
+    "UK": {
+        "london": {
+            "name": "London",
+            "areas": ["Central", "West End", "East End", "South", "North", "Canary Wharf"]
+        },
+        "manchester": {
+            "name": "Manchester",
+            "areas": ["City Centre", "Salford", "Trafford", "North", "South"]
+        },
+        "birmingham": {
+            "name": "Birmingham",
+            "areas": ["City Centre", "Edgbaston", "Solihull", "North", "South"]
+        }
+    }
+}

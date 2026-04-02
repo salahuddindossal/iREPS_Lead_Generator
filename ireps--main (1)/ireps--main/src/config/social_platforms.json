@@ -1,0 +1,32 @@
+{
+  "Reddit": {
+    "domain_patterns": ["reddit.com", "redd.it"],
+    "username_pattern": "u/[a-zA-Z0-9_-]+",
+    "profile_link_template": "https://reddit.com/user/username",
+    "post_link_template": "https://reddit.com/permalink"
+  },
+  "Facebook": {
+    "domain_patterns": ["facebook.com", "fb.com"],
+    "username_pattern": "facebook.com/([a-zA-Z0-9._-]+)",
+    "profile_link_template": "https://facebook.com/username",
+    "post_link_template": "https://facebook.com/username/posts/post_id"
+  },
+  "Twitter": {
+    "domain_patterns": ["twitter.com", "x.com"],
+    "username_pattern": "@([a-zA-Z0-9_]+)",
+    "profile_link_template": "https://twitter.com/username",
+    "post_link_template": "https://twitter.com/username/status/tweet_id"
+  },
+  "LinkedIn": {
+    "domain_patterns": ["linkedin.com"],
+    "username_pattern": "linkedin.com/in/([a-zA-Z0-9_-]+)",
+    "profile_link_template": "https://linkedin.com/in/username",
+    "post_link_template": "https://linkedin.com/feed/update/urn:li:activity:post_id"
+  },
+  "Instagram": {
+    "domain_patterns": ["instagram.com", "instagr.am"],
+    "username_pattern": "@([a-zA-Z0-9._]+)",
+    "profile_link_template": "https://instagram.com/username",
+    "post_link_template": "https://instagram.com/p/post_id"
+  }
+}

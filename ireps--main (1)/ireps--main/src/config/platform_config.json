@@ -1,0 +1,62 @@
+{
+    "platforms": {
+        "reddit": {
+            "enabled": true,
+            "scrape_posts": true,
+            "scrape_comments": true,
+            "subreddits": [
+                "r/realestate",
+                "r/TorontoRealEstate",
+                "r/FirstTimeHomeBuyer",
+                "r/RealEstateCanada",
+                "r/RealEstate",
+                "r/Housing"
+            ]
+        },
+        "facebook": {
+            "enabled": true,
+            "scrape_posts": true,
+            "scrape_comments": true,
+            "scrape_groups": true,
+            "groups": [
+                "Toronto Real Estate",
+                "First Time Home Buyers Canada",
+                "Vancouver Real Estate",
+                "UK Property Buyers"
+            ]
+        },
+        "instagram": {
+            "enabled": true,
+            "scrape_posts": true,
+            "scrape_comments": false,
+            "hashtags": [
+                "#torontorealestate",
+                "#firsttimehomebuyer",
+                "#househunting",
+                "#realestatecanada",
+                "#dreamhome"
+            ]
+        },
+        "twitter": {
+            "enabled": true,
+            "scrape_tweets": true,
+            "scrape_replies": true,
+            "search_terms": [
+                "looking to buy a house",
+                "need a realtor",
+                "first time home buyer",
+                "house hunting"
+            ]
+        },
+        "linkedin": {
+            "enabled": true,
+            "scrape_posts": true,
+            "scrape_comments": true,
+            "search_terms": [
+                "buying a home",
+                "real estate advice",
+                "first time buyer"
+            ]
+        }
+    }
+}

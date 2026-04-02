@@ -1,0 +1,27 @@
+{
+    "quality": {
+        "min_score": 20,
+        "level": "All"
+    },
+    "location": {
+        "country": "All",
+        "city": ""
+    },
+    "lead_type": {
+        "posts": true,
+        "comments": true,
+        "urgent_only": false,
+        "has_contact": false,
+        "has_budget": false
+    },
+    "date_range": {
+        "preset": "Last 30d",
+        "from": null,
+        "to": null
+    },
+    "ai": {
+        "verified_only": false,
+        "min_priority": 0,
+        "intent": "All"
+    }
+}

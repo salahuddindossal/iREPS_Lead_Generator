@@ -1,0 +1,23 @@
+{
+  "Canada": {
+    "cities": ["Toronto", "Vancouver", "Montreal", "Calgary", "Edmonton", "Ottawa", "Mississauga", "Brampton", "Surrey"],
+    "currency": "CAD",
+    "currency_symbols": ["$", "CA$", "CAD"],
+    "phone_codes": ["416", "604", "514", "403", "780", "613", "905"],
+    "keywords": ["basement", "hydro", "detached", "townhouse", "condo", "home builder", "general contractor"]
+  },
+  "USA": {
+    "cities": ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "Austin"],
+    "currency": "USD",
+    "currency_symbols": ["$", "US$", "USD"],
+    "phone_codes": ["212", "310", "312", "713", "602", "215", "210", "619", "214", "512"],
+    "keywords": ["yard", "remodeling", "fixer upper", "HOA", "construction company", "home improvement"]
+  },
+  "UK": {
+    "cities": ["London", "Birmingham", "Manchester", "Glasgow", "Liverpool", "Bristol", "Leeds", "Sheffield", "Edinburgh"],
+    "currency": "GBP",
+    "currency_symbols": ["£", "GBP"],
+    "phone_codes": ["020", "0121", "0161", "0141", "0151", "0117", "0113", "0114", "0131"],
+    "keywords": ["flat", "terraced", "semi-detached", "garden", "cellar", "refurbishment", "building work", "tradesman"]
+  }
+}

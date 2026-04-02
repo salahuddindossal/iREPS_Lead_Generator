@@ -1,0 +1,36 @@
+{
+    "sources": {
+        "reddit": {
+            "enabled": true,
+            "priority": 1,
+            "scrape_posts": true,
+            "scrape_comments": true
+        },
+        "facebook": {
+            "enabled": true,
+            "priority": 2,
+            "scrape_posts": true,
+            "scrape_comments": true,
+            "scrape_groups": true
+        },
+        "instagram": {
+            "enabled": true,
+            "priority": 3,
+            "scrape_posts": true,
+            "scrape_comments": true,
+            "scrape_stories": false
+        },
+        "twitter": {
+            "enabled": true,
+            "priority": 4,
+            "scrape_tweets": true,
+            "scrape_replies": true
+        },
+        "linkedin": {
+            "enabled": true,
+            "priority": 5,
+            "scrape_posts": true,
+            "scrape_comments": true
+        }
+    }
+}
